@@ -47,14 +47,33 @@
 #print('Olá {:^20}!'.format(n))
 #print("Olá {:=^20}!".format(n))
 
-n1=int(input('Digite um número: '))
-n2=int(input('Digite mais um número: '))
-s=n1+n2
-m=n1*n2
-d=n1/n2
-di=n1//n2
-r=n1%n2
-p=n1**n2
-print('RESULTADO DA:\n Soma: {}, Multiplicação: {}, Divisão: {:.2f}'.format(s,m,d), end=', ')
-print('Divisão inteira: {}, Resto da divisão: {}, Potenciação: {}'.format(di,r,p))
+#OPERADORES MATEMÁTICOS -------------------------------------------
+
+#n1=int(input('Digite um número: '))
+#n2=int(input('Digite mais um número: '))
+#s=n1+n2
+#m=n1*n2
+#d=n1/n2
+#di=n1//n2
+#r=n1%n2
+#p=n1**n2
+#print('RESULTADO DA:\n Soma: {}, Multiplicação: {}, Divisão: {:.2f}'.format(s,m,d), end=', ')
+#print('Divisão inteira: {}, Resto da divisão: {}, Potenciação: {}'.format(di,r,p))
+
+#MÓDULOS ----------------------------------------------------------
+
+#import math
+#num = int(input('Digite um número: '))
+#raiz = math.sqrt(num)
+#print('A raiz de {} é {:.2f}'.format(num,raiz))
+
+#from math import sqrt
+#num = int(input('Digite um número: '))
+#raiz =sqrt(num)
+#print('A raiz de {} é {:.2f}'.format(num,raiz))
+
+#import random
+#num=random.randint(1,10)
+#print(num)
+
 
