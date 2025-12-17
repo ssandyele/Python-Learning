@@ -76,4 +76,43 @@
 #num=random.randint(1,10)
 #print(num)
 
+#STRINGS ----------------------------------------------------------
 
+#print('''Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+#Integer at ullamcorper dui. Suspendisse congue lacus eu 
+#erat aliquam ultricies. Nullam ac elementum ligula. Sed 
+#eu lorem pellentesque, finibus odio at, pretium est. 
+#Nullam in mauris elementum, consequat sapien at, maximus 
+#libero. Praesent orci sapien, lobortis eu nulla mattis, 
+#blandit mattis lectus. Nulla faucibus vitae purus sed imperdiet. ''')
+
+
+#frase = 'Feliz Natal e Ano Novo'
+#print(frase)
+#print(frase[3])
+#print(frase[3:13])
+#print(frase[:13])
+#print(frase[13:])
+#print(frase[1:15:2])
+#print(frase[::2])
+
+#print(len(frase))
+#print(frase.count('o'))
+#print(frase.count('o',0,13))
+#print(frase.find('tal'))
+#print(frase.find('Dia'))
+#print('Feliz' in frase)
+
+#print(frase.replace('Feliz','Ótimo'))
+#print(frase.upper())
+#print(frase.lower())
+#print(frase.capitalize())
+#print(frase.title())
+#print(frase.strip())
+#print(frase.rstrip())
+#print(frase.lstrip())
+
+#print(frase.split())
+#print('-'.join(frase))
+#frase=frase.split()
+#print('-'.join(frase))
