@@ -6,7 +6,7 @@ b=float(input('Digite o comprimento da segunda reta: '))
 c=float(input('Digite o comprimento da terceira reta: '))
 
 if a+b>c and a+c>b and b+c>a:
-    print('Essas retas podem formar um triângulo!')
+    print('Essas retas PODEM FORMAR um triângulo!')
 else:
-    print('Essas retas NÃO podem formar um triângulo!')
- 
+    print('Essas retas NÃO PODEM FORMAR um triângulo!')
+    
