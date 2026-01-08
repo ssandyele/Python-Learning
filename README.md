@@ -24,4 +24,7 @@ Repositório com exercícios feitos durante meus estudos em Python.
 ### 🔹 Laço de repetição (for)
 - Exercício 46 ao 56
 
+### 🔹 Laço de repetição (while)
+- Exercício 57 ao 71
+
 ---
