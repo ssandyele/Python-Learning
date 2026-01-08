@@ -19,6 +19,10 @@ mes=input("Mês - ")
 ano=input("Ano - ")
 print("Você nasceu em",dia,"de",mes,"de",ano,". Correto?")
 
+nombre = "Maria"
+edad = 30
+print(f'O nome dela é {nombre} e ela tem {edad} anos.')
+
 #TIPOS PRIMITIVOS -------------------------------------------
 a=int(input("Primeiro número - "))
 b=int(input("Segundo número - "))
