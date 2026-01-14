@@ -27,4 +27,7 @@ Repositório com exercícios feitos durante meus estudos em Python.
 ### 🔹 Laço de repetição (while)
 - Exercício 57 ao 71
 
+### 🔹 Tuplas
+- Exercício 72 ao 77
+
 ---
