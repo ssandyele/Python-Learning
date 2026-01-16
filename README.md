@@ -30,4 +30,7 @@ Repositório com exercícios feitos durante meus estudos em Python.
 ### 🔹 Tuplas
 - Exercício 72 ao 77
 
+### 🔹 Listas
+- Exercício 78 ao 89
+
 ---
