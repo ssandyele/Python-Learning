@@ -116,3 +116,85 @@ print(f'Lista C: {c}')
 print(f'Lista D: {d}')
 # Lista C: [3, 5, 7, 9]
 # Lista D: [3, 5, 0, 9]
+
+#------------------------------------------------------------------
+# LISTAS DE LISTAS / MATRIZ
+
+teste=list() #inícia teste como uma lista vazia
+teste.append('Ana') # teste = ['Ana']
+teste.append(40) # teste = ['Ana', 40]
+galera=list() #inícia galera como uma lista vazia
+galera.append(teste[:]) #copia os dados de 'teste' em 'galera'
+teste[0]='Maria' # teste = ['Maria', 40]
+teste[1]=22 #teste = ['Maria', 22]
+galera.append(teste[:]) #adiciona mais uma cópia de 'teste' em 'galera'
+print(galera) 
+# [['Ana', 40], ['Maria', 22]]
+
+
+pessoas=[['André', 19], ['Ana', 18], ['Vínicius', 17], ['Vitória', 20]]
+#            0      1      0     1        0       1         0       1 
+#               0             1               2                3
+
+print(pessoas)
+# [['André', 19], ['Ana', 18], ['Vínicius', 17], ['Vitória', 20]]
+print(pessoas[0])
+# ['André', 19]
+print(pessoas[0][1])
+# 19
+print(pessoas[2][0])
+# Vínicius
+
+for p in pessoas:
+    print(p) #imprime cada pessoa da lista
+# ['André', 19]
+# ['Ana', 18]
+# ['Vínicius', 17]
+# ['Vitória', 20]
+
+for p in pessoas:
+    print(p[0]) #imprime apenas os nomes da lista
+# André
+# Ana
+# Vínicius
+# Vitória
+
+for p in pessoas: 
+    print(p[1]) #imprime apenas as idades da lista
+# 19
+# 18
+# 17
+# 20
+
+for p in pessoas:
+    print(f'{p[0]} tem {p[1]} anos de idade.')
+# André tem 19 anos de idade.
+# Ana tem 18 anos de idade.
+# Vínicius tem 17 anos de idade.
+# Vitória tem 20 anos de idade.
+
+ind=list()
+dado=list()
+for c in range(0,5):
+    dado.append(str(input('Nome: ')))
+    dado.append(int(input('Idade: ')))
+    ind.append(dado[:]) #lista 'ind' recebe uma cópia dos dados de 'dado'
+    dado.clear() #remove todos os elementos de 'dado'
+print(ind)
+# [['Amanda', 20], ['Bruno', 35], ['Carla', 50], ['David', 12], ['Edmara', 85]]
+
+totmai=totmen=0
+for i in ind:
+    if i[1]>=18:
+        print(f'{i[0]} é maior de idade.')
+        totmai += 1
+    else:
+        print(f'{i[0]} é menor de idade.')
+        totmen += 1
+print(f'Temos {totmai} maior(es) e {totmen} menor(es) de idade.')
+# Amanda é maior de idade.
+# Bruno é maior de idade.
+# Carla é maior de idade.
+# David é menor de idade.
+# Edmara é maior de idade.
+# Temos 4 maiores e 1 menores de idade.
