@@ -74,3 +74,36 @@ print(brasil[0]['uf'])
 # Paraná
 print(brasil[1]['sigla'])
 # SC
+
+#------------------------------------------------------------------
+# Entrada de informações de um dicionário
+
+estado = dict()
+brasil = list()
+for c in range(0,3):
+    estado['uf']=str(input('Unidade Federativa: ')).title().strip()
+    estado['sigla']=str(input('Sigla do Estado: ')).upper().strip()
+    brasil.append(estado.copy()) # Método próprio da estrutura para copiar dicionários
+print(brasil)
+#[{'uf': 'Paraná', 'sigla': 'PR'}, {'uf': 'São Paulo', 'sigla': 'SP'}, {'uf': 'Alagoas', 'sigla': 'AL'}]
+for e in brasil:
+    print (e)
+# {'uf': 'Paraná', 'sigla': 'PR'}
+# {'uf': 'São Paulo', 'sigla': 'SP'}
+# {'uf': 'Alagoas', 'sigla': 'AL'}
+for e in brasil:
+    for k, v in e.items():
+        print(f'O campo {k} tem valor {v}.')
+# O campo uf tem valor Paraná.
+# O campo sigla tem valor PR.
+# O campo uf tem valor São Paulo.
+# O campo sigla tem valor SP.
+# O campo uf tem valor Alagoas.
+# O campo sigla tem valor AL.
+for e in brasil:
+    for v in e.values():
+        print(v, end=' ')
+    print()
+# Paraná PR 
+# São Paulo SP 
+# Alagoas AL 
