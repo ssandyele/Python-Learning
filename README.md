@@ -33,4 +33,7 @@ Repositório com exercícios feitos durante meus estudos em Python.
 ### 🔹 Listas
 - Exercício 78 ao 89
 
+### 🔹 Dicionários
+- Exercício 90 ao 95
+
 ---
