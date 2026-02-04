@@ -36,4 +36,7 @@ Repositório com exercícios feitos durante meus estudos em Python.
 ### 🔹 Dicionários
 - Exercício 90 ao 95
 
+### 🔹 Funções
+- Exercício 96 ao 100
+
 ---
