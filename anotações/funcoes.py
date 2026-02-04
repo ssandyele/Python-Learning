@@ -81,3 +81,130 @@ valores=[3, 7, 5, 9, 4, 2]
 dobra(valores)
 print(valores)
 # [6, 14, 10, 18, 8, 4]
+
+#------------------------------------------------------------------
+# Interactive Help / Ajuda Interativa
+
+#import datetime
+
+#help(print) -> Mostra como usar a função print.
+#help(list) -> Lista todos os métodos disponíveis para uma lista.
+#help(datetime) -> Exibe documentação sobre a biblioteca datetime.
+
+# outro modo:
+#print(input.__doc__) # Mostra a documentação da função input.
+
+#------------------------------------------------------------------
+# docstrings
+
+def funcao(a, b):
+    """
+    Docstring para funcao
+    
+    :param a: Descrição
+    :param b: Descrição
+    """ #usando três aspas logo abaixo do def, um modelo de docstring surge automaticamente; 
+    s=a+b # abaixo da docstring, programamos a função.
+    # com isso podemos documentar nossa função. Veja um exemplo:
+
+def contador(i, f, p):
+    """
+    -> Faz uma contagem e mostra na tela.
+    :param i: início da contagem
+    :param f: fim da contagem
+    :param p: passo da contagem
+    :return: sem retorno
+    """
+    c = i
+    while c <= f:
+        print(f'{c}', end='..')
+        c += p
+        print('FIM!')
+# acima, temos a função contador, documentada. 
+
+#help(contador) -> Usando a função help para contador, a docstring será exibida no terminal como um manual.
+# 
+#------------------------------------------------------------------
+# Parâmetros opcionais
+
+# Parâmetros opcionais em Python são definidos na assinatura da função atribuindo um valor 
+# padrão a um argumento, tornando-o facultativo durante a chamada. Se o valor não for fornecido, 
+# o Python utiliza o padrão estabelecido. Eles aumentam a flexibilidade, permitindo chamadas com ou sem argumentos. 
+
+def somar(a=0, b=0, c=0): #Valor 0 atribuído aos parâmetros a, b, c. Se o valor de algum(s) desse(s) parâmetro não for passado, a função usará o valor padrão (0).
+    s = a + b + c
+    print(f'A soma vale {s}')
+
+somar(4, 9, 1)
+# A soma vale 14
+somar(2, 3)
+# A soma vale 5
+somar(7)
+# A soma vale 7
+somar()
+# A soma vale 0
+somar(c=8, a=9)
+# A soma vale 17
+
+#------------------------------------------------------------------
+# Escopo de variáveis
+
+def teste(y):
+    y += 3
+    print(f'Valor de x dentro da função: {x}') #Como x foi declarada no escopo global, a função consegue acessar o valor da variável x.
+    # Valor de x dentro da função: 5
+    print(f'Valor de y dentro da função: {y}')
+    # Valor de y dentro da função: 8
+
+x = 5
+teste(x)
+print(f'Valor de x fora da função: {x}')
+# Valor de x fora da função: 5
+#print(f'Valor de y fora da função: {y}') -> isso resultará em um erro, pois a variável y foi declarada no escopo da função teste. No escopo global, y não foi declarada.
+
+
+
+def teste2(m):
+    m += 2 #Esta variável m, não é a mesma do escopo global, deste modo, a variável m do escopo da função se altera, mas a variável m do global, continua com o valor inalterado pela função.
+    print(f'Valor de m dentro da função: {m}')
+    # Valor de m dentro da função: 6
+
+m = 4
+print(f'Valor de m no escopo global, antes da função ser chamada: {m}')
+# Valor de m no escopo global, antes da função ser chamada: 4
+teste2(m)
+print(f'Valor de m no escopo global, depois da função ser chamada: {m}')
+# Valor de m no escopo global, depois da função ser chamada: 4
+
+
+
+def teste3(z):
+    global w #Faz com que a função use a variável w do escopo global e não crie uma nova variável w dentro da função
+    w = 1 #Redefine w como 1
+    z += 6
+    print(f'Valor de w dentro da função: {w}')
+    # Valor de w dentro da função: 1
+    print(f'Valor de z dentro da função: {z}')
+    # Valor de z dentro da função: 13
+
+w = 7
+print(f'Valor de w no escopo global, antes da função ser chamada: {w}')
+# Valor de w no escopo global, antes da função ser chamada: 7
+teste3(w)
+print(f'Valor de w no escopo global, depois da função ser chamada (usando global): {w}')
+# Valor de w no escopo global, depois da função ser chamada (usando global): 1
+
+
+#------------------------------------------------------------------
+# Retorno de resultados
+
+def somas(s=0, t=0, u=0):
+    total = s + t + u
+    return total #Retorna o resultado da soma para o programa principal
+
+r1 = somas(3, 2, 5) #Armazena o total na variável r1
+r2 = somas(2, 4) #Armazena o total na variável r2
+r3 = somas(8) #Armazena o total na variável r3
+
+print(f'Os resultados foram {r1}, {r2} e {r3}')
+# Os resultados foram 10, 6 e 8
