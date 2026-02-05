@@ -37,6 +37,6 @@ Repositório com exercícios feitos durante meus estudos em Python.
 - Exercício 90 ao 95
 
 ### 🔹 Funções
-- Exercício 96 ao 100
+- Exercício 96 ao 106
 
 ---
